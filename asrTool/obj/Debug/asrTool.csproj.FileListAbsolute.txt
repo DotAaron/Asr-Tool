@@ -1,0 +1,10 @@
+C:\Users\Aaron\Dropbox\asrTool\asrTool\bin\Debug\asrTool.exe.config
+C:\Users\Aaron\Dropbox\asrTool\asrTool\bin\Debug\asrTool.exe
+C:\Users\Aaron\Dropbox\asrTool\asrTool\bin\Debug\asrTool.pdb
+C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.csprojAssemblyReference.cache
+C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.Form1.resources
+C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.Properties.Resources.resources
+C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.csproj.GenerateResource.cache
+C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.csproj.CoreCompileInputs.cache
+C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.exe
+C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.pdb
