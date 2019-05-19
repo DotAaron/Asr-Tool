@@ -42,10 +42,10 @@ namespace asrTool
             if (TcpTool.QuickSend(asrip.Text, int.Parse(asrport.Text), "AsrTool") != "timedout") { tcpfrontOne.Text = "Basic:Success"; tcpfrontOne.ForeColor = Color.Green; } else { tcpfrontOne.Text = "Basic:Failed"; tcpfrontOne.ForeColor = Color.DarkRed; }
 
             tcpfrontTwo.Text = "Plugin injection:Testing...";
-            if (TcpTool.QuickSend(asrip.Text, int.Parse(asrport.Text), "$internAUP printl AsrTool Plugin Injection") != "timedout") { tcpfrontTwo.Text = "Plugin injection:Success"; tcpfrontTwo.ForeColor = Color.Green; } else { tcpfrontTwo.Text = "Plugin injection:Failed"; tcpfrontTwo.ForeColor = Color.DarkRed; }
+            if (TcpTool.QuickSend(asrip.Text, int.Parse(asrport.Text), "$internAUP printl AsrTool Plugin Injection") == "Injected.") { tcpfrontTwo.Text = "Plugin injection:Success"; tcpfrontTwo.ForeColor = Color.Green; } else { tcpfrontTwo.Text = "Plugin injection:Failed"; tcpfrontTwo.ForeColor = Color.DarkRed; }
 
             tcpfrontThird.Text = "AsrShare:Testing...";
-            if (TcpTool.QuickSend(asrip.Text, int.Parse(asrport.Text), "c:askconnect") != "timedout") { tcpfrontThird.Text = "AsrShare:Success"; tcpfrontThird.ForeColor = Color.Green; } else { tcpfrontThird.Text = "AsrShare:Failed"; tcpfrontThird.ForeColor = Color.DarkRed; }
+            if (TcpTool.QuickSend(asrip.Text, int.Parse(asrport.Text), "c:askconnect") == "c:acceptconnect") { tcpfrontThird.Text = "AsrShare:Success"; tcpfrontThird.ForeColor = Color.Green; } else { tcpfrontThird.Text = "AsrShare:Failed"; tcpfrontThird.ForeColor = Color.DarkRed; }
 
         }
 
@@ -129,6 +129,16 @@ namespace asrTool
         private void Button7_Click(object sender, EventArgs e)
         {
             TcpTool.QuickSend(asrip.Text, int.Parse(asrport.Text), "$internAUP " + textBox3.Text);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            TcpTool.QuickSend(asrip.Text, int.Parse(asrport.Text), "execute exit");
         }
     }
 }

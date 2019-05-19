@@ -30,10 +30,10 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tcpfrontOne = new System.Windows.Forms.Label();
-            this.tcpfrontTwo = new System.Windows.Forms.Label();
             this.tcpfrontThird = new System.Windows.Forms.Label();
+            this.tcpfrontTwo = new System.Windows.Forms.Label();
+            this.tcpfrontOne = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.asrstatus = new System.Windows.Forms.Label();
             this.asrport = new System.Windows.Forms.TextBox();
             this.asrip = new System.Windows.Forms.TextBox();
@@ -43,8 +43,8 @@
             this.asrshareOne = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.clientTwo = new System.Windows.Forms.Label();
             this.clientOne = new System.Windows.Forms.Label();
@@ -53,14 +53,17 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -87,6 +90,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FrontTcp check";
             // 
+            // tcpfrontThird
+            // 
+            this.tcpfrontThird.Location = new System.Drawing.Point(7, 66);
+            this.tcpfrontThird.Name = "tcpfrontThird";
+            this.tcpfrontThird.Size = new System.Drawing.Size(214, 13);
+            this.tcpfrontThird.TabIndex = 6;
+            this.tcpfrontThird.Text = "AsrShare";
+            // 
+            // tcpfrontTwo
+            // 
+            this.tcpfrontTwo.Location = new System.Drawing.Point(7, 44);
+            this.tcpfrontTwo.Name = "tcpfrontTwo";
+            this.tcpfrontTwo.Size = new System.Drawing.Size(214, 13);
+            this.tcpfrontTwo.TabIndex = 5;
+            this.tcpfrontTwo.Text = "Plugin injection";
+            // 
+            // tcpfrontOne
+            // 
+            this.tcpfrontOne.Location = new System.Drawing.Point(7, 20);
+            this.tcpfrontOne.Name = "tcpfrontOne";
+            this.tcpfrontOne.Size = new System.Drawing.Size(214, 13);
+            this.tcpfrontOne.TabIndex = 4;
+            this.tcpfrontOne.Text = "Basic";
+            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -97,30 +124,6 @@
             this.button2.Text = "Run check";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // tcpfrontOne
-            // 
-            this.tcpfrontOne.Location = new System.Drawing.Point(7, 20);
-            this.tcpfrontOne.Name = "tcpfrontOne";
-            this.tcpfrontOne.Size = new System.Drawing.Size(214, 13);
-            this.tcpfrontOne.TabIndex = 4;
-            this.tcpfrontOne.Text = "Basic";
-            // 
-            // tcpfrontTwo
-            // 
-            this.tcpfrontTwo.Location = new System.Drawing.Point(7, 44);
-            this.tcpfrontTwo.Name = "tcpfrontTwo";
-            this.tcpfrontTwo.Size = new System.Drawing.Size(214, 13);
-            this.tcpfrontTwo.TabIndex = 5;
-            this.tcpfrontTwo.Text = "Plugin injection";
-            // 
-            // tcpfrontThird
-            // 
-            this.tcpfrontThird.Location = new System.Drawing.Point(7, 66);
-            this.tcpfrontThird.Name = "tcpfrontThird";
-            this.tcpfrontThird.Size = new System.Drawing.Size(214, 13);
-            this.tcpfrontThird.TabIndex = 6;
-            this.tcpfrontThird.Text = "AsrShare";
             // 
             // asrstatus
             // 
@@ -210,17 +213,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Server config";
             // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(150, 152);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(79, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Get config";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Silver;
@@ -232,6 +224,17 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(222, 126);
             this.textBox1.TabIndex = 3;
+            // 
+            // button4
+            // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(150, 152);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(79, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Get config";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // groupBox4
             // 
@@ -317,17 +320,6 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Plugin injection";
             // 
-            // button7
-            // 
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Location = new System.Drawing.Point(150, 116);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(79, 23);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Inject";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Button7_Click);
-            // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.Silver;
@@ -340,12 +332,46 @@
             this.textBox3.TabIndex = 4;
             this.textBox3.Text = "printl Plugin injection test ; color 6";
             // 
+            // button7
+            // 
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Location = new System.Drawing.Point(150, 116);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(79, 23);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Inject";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.button8);
+            this.groupBox7.Location = new System.Drawing.Point(703, 199);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(85, 106);
+            this.groupBox7.TabIndex = 10;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Crash";
+            // 
+            // button8
+            // 
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.button8.Location = new System.Drawing.Point(7, 17);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(72, 80);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "Kill Server";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -365,6 +391,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asr Tool";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -374,6 +401,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,6 +436,8 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button button8;
     }
 }
 
