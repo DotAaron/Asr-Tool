@@ -36,12 +36,12 @@ namespace asrTool
                 NetworkStream stream = client.GetStream();
 
                 stream.ReadTimeout = 500;
-                byte[] configmsg = Encoding.Unicode.GetBytes(text);
+                byte[] configmsg = Encoding.Default.GetBytes(text);
                 stream.Write(configmsg, 0, configmsg.Length);
 
                 byte[] buffer = new byte[client.ReceiveBufferSize];
                 int data = stream.Read(buffer, 0, client.ReceiveBufferSize);
-                string received_ch = Encoding.Unicode.GetString(buffer, 0, data);
+                string received_ch = Encoding.Default.GetString(buffer, 0, data);
 
                 client.Close();
 
@@ -72,15 +72,15 @@ namespace asrTool
                 stream.ReadTimeout = 10000;
 
                 int data = stream.Read(buffer, 0, client.ReceiveBufferSize);
-                string dataReceived = Encoding.Unicode.GetString(buffer, 0, data);
+                string dataReceived = Encoding.Default.GetString(buffer, 0, data);
 
                 if (dataReceived == "c:askconnect")
                 {
-                    client.Client.Send(Encoding.Unicode.GetBytes("c:acceptconnect"));
+                    client.Client.Send(Encoding.Default.GetBytes("c:acceptconnect"));
                     ConnectedAsrShare = true;
                 }
 
-                if (ConnectedAsrShare) { client.Client.Send(Encoding.Unicode.GetBytes("[0]AsrShareContact")); }
+                if (ConnectedAsrShare) { client.Client.Send(Encoding.Default.GetBytes("[0]AsrShareContact")); }
 
                 Debug.Write(dataReceived.Substring(0, 7));
                 dataReceived = "";
@@ -106,12 +106,12 @@ namespace asrTool
                     NetworkStream stream = client.GetStream();
 
                     stream.ReadTimeout = 500;
-                    byte[] configmsg = Encoding.Unicode.GetBytes("[" + id + "]\nclient");
+                    byte[] configmsg = Encoding.Default.GetBytes("[" + id + "]\nclient");
                     stream.Write(configmsg, 0, configmsg.Length);
 
                     byte[] buffer = new byte[client.ReceiveBufferSize];
                     int data = stream.Read(buffer, 0, client.ReceiveBufferSize);
-                    string received_ch = Encoding.Unicode.GetString(buffer, 0, data);
+                    string received_ch = Encoding.Default.GetString(buffer, 0, data);
 
                     Debug.Write(received_ch);
 

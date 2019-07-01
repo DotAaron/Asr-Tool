@@ -55,15 +55,18 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.usocketport = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -141,7 +144,7 @@
             this.asrport.Name = "asrport";
             this.asrport.Size = new System.Drawing.Size(37, 20);
             this.asrport.TabIndex = 3;
-            this.asrport.Text = "100";
+            this.asrport.Text = "65255";
             this.asrport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // asrip
@@ -343,21 +346,11 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.button8);
-            this.groupBox7.Location = new System.Drawing.Point(703, 199);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(85, 106);
-            this.groupBox7.TabIndex = 10;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Crash";
-            // 
             // button8
             // 
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.button8.Location = new System.Drawing.Point(7, 17);
+            this.button8.Location = new System.Drawing.Point(259, 17);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(72, 80);
             this.button8.TabIndex = 0;
@@ -365,13 +358,59 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button9
+            // 
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.button9.Location = new System.Drawing.Point(6, 17);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(169, 80);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "Clients Generator";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.Button9_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.button10);
+            this.groupBox8.Controls.Add(this.button8);
+            this.groupBox8.Controls.Add(this.button9);
+            this.groupBox8.Location = new System.Drawing.Point(450, 199);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(338, 106);
+            this.groupBox8.TabIndex = 11;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "More";
+            // 
+            // button10
+            // 
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.button10.Location = new System.Drawing.Point(181, 17);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(72, 80);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "Test USocket";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // usocketport
+            // 
+            this.usocketport.Location = new System.Drawing.Point(625, 395);
+            this.usocketport.Name = "usocketport";
+            this.usocketport.Size = new System.Drawing.Size(37, 20);
+            this.usocketport.TabIndex = 12;
+            this.usocketport.Text = "65220";
+            this.usocketport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.usocketport);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -401,7 +440,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,8 +475,11 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox usocketport;
+        private System.Windows.Forms.Button button10;
     }
 }
 

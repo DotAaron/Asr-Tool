@@ -92,31 +92,35 @@ namespace asrTool
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            if (button5.Text == "Run emulator")
+            try
             {
-                button5.Text = "Stop";
+                if (button5.Text == "Run emulator")
+                {
+                    button5.Text = "Stop";
 
-                TcpTool.ipc = asrip.Text;
-                TcpTool.portc = int.Parse(asrport.Text);
+                    TcpTool.ipc = asrip.Text;
+                    TcpTool.portc = int.Parse(asrport.Text);
 
-                EmuCLIENT = new Thread(new ThreadStart(TcpTool.Client));
-                EmuCLIENT.Start();
-                checkCLConnected.Start();
-                checkCLConnected.Tick += CheckCLConnected_Tick; ;
-                checkCLConnected.Interval = 1;
-                clientOne.Text = "Emulating... (id:" + TcpTool.id + ")";
-                clientTwo.Text = "Client: Not connected, connecting...";
+                    EmuCLIENT = new Thread(new ThreadStart(TcpTool.Client));
+                    EmuCLIENT.Start();
+                    checkCLConnected.Start();
+                    checkCLConnected.Tick += CheckCLConnected_Tick; ;
+                    checkCLConnected.Interval = 1;
+                    clientOne.Text = "Emulating... (id:" + TcpTool.id + ")";
+                    clientTwo.Text = "Client: Not connected, connecting...";
 
+                }
+                else
+                {
+                    TcpTool.StopCL = true;
+                    EmuCLIENT = null;
+                    checkCLConnected.Stop();
+                    button5.Text = "Run emulator";
+                    clientOne.Text = "Not emulating";
+                    clientTwo.Text = "Client: Not connected";
+                }
             }
-            else
-            {
-                TcpTool.StopCL = true;
-                EmuCLIENT = null;
-                checkCLConnected.Stop();
-                button5.Text = "Run emulator";
-                clientOne.Text = "Not emulating";
-                clientTwo.Text = "Client: Not connected";
-            }
+            catch (Exception) { }
         }
 
         private void CheckCLConnected_Tick(object sender, EventArgs e)
@@ -139,6 +143,24 @@ namespace asrTool
         private void button8_Click(object sender, EventArgs e)
         {
             TcpTool.QuickSend(asrip.Text, int.Parse(asrport.Text), "execute exit");
+        }
+
+        private void Button9_Click(object sender, EventArgs e)
+        {
+            ClientGen cg = new ClientGen();
+            cg.ip = asrip.Text;
+            cg.port = int.Parse(asrport.Text);
+
+            cg.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TcpTool.QuickSend(asrip.Text, int.Parse(usocketport.Text), "AsrTool").IndexOf("usocket | version") != -1) { MessageBox.Show("USocket is running on the port " + usocketport.Text, "USocket", MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show("USocket is not running on the port " + usocketport.Text, "USocket", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+            catch (Exception) { }
         }
     }
 }

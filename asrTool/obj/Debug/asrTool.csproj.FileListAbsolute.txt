@@ -8,3 +8,4 @@ C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.csproj.GenerateResource
 C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.csproj.CoreCompileInputs.cache
 C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.exe
 C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.pdb
+C:\Users\Aaron\Dropbox\asrTool\asrTool\obj\Debug\asrTool.ClientGen.resources
